@@ -1,0 +1,113 @@
+*,
+*:before,
+*:after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family:
+            -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial,
+            sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-size: 16px;
+}
+body,
+#app {
+    height: 100vh;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+#life {
+    display: flex;
+    flex-wrap: wrap;
+    height: 90%;
+    width: 90%;
+    padding: 0;
+    list-style: none;
+    align-items: center;
+}
+#life li {
+    background: #EEEEEE;
+    width: 1em;
+    height: 1em;
+    margin: 0.25em;
+    border-radius: 50%;
+}
+#life li.you-are-here {
+    background: #e57373;
+}
+
+#settings {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.8);
+    border-bottom: 1px solid grey;
+    padding: 2% 10%;
+    transform: translateY(-100%);
+    transition: transform 0.3s ease;
+    z-index: 1;
+}
+
+.settings-open #settings {
+    transform: translateY(0);
+}
+
+#settings label {
+    display: block;
+}
+
+#settings input,
+#settings select {
+    width: 100%;
+    display: block;
+}
+
+#settings input,
+#settings select,
+#settings button {
+    background: white;
+    -webkit-appearance: none;
+    appearance: none;
+    border-radius: 0;
+    border: 1px solid grey;
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
+#settings .credits {
+    font-size: 0.75rem;
+    color: grey;
+}
+
+#settings .credits a {
+    color: #e57373;
+}
+#settings h3 {
+    margin: 0.5em 0 0.5em 0;
+}
+
+
+
+#controls {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    opacity: 0.1;
+    transition: opacity 0.3s ease;
+    padding: 0 5%;
+}
+
+#controls a {
+    font-size: 12px;
+    color: grey;
+}
+
+#controls:hover {
+    opacity: 1;
+}
