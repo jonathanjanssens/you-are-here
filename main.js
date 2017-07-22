@@ -1,5 +1,7 @@
 var Life = {
 
+    settings: {},
+
     /**
      * Initialise the application
      */
